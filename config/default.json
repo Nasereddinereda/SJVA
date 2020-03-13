@@ -1,0 +1,4 @@
+{
+  "mongoURL": "mongodb://Localhost:27017/Cdals",
+  "JWT_SECRET": "my-own-ultra-secure-and-ultra-long-secret-token-json-bekkal-nasereddine-cdals"
+}
