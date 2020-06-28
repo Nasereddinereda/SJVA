@@ -63,6 +63,10 @@ const registrationSchema = new mongoose.Schema({
       "HIGHT"
     ]
   },
+  confirm:{
+  type: String, 
+  default:"false" 
+  },
   relation: {
     type: String,
     min: 20,

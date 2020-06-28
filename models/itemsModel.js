@@ -14,9 +14,34 @@ const itemsSchema = new mongoose.Schema({
         default: "item",
         enum: ["item", "event"]
     },
+    registration: {
+        type: Boolean,
+        default: false
+    },
     createdAt: {
         type: Date,
         default: Date.now
+    },
+    images: [
+        {
+            type: String
+        }
+    ], 
+    see : {
+        type: Number ,
+        default: 0 
+    } ,
+    departure: {
+        type: String
+    },
+    arrival: {
+        type: String
+    },
+    date: {
+        type: String
+    },
+    hour: {
+        type: String
     }
 });
 

@@ -29,7 +29,7 @@ exports.deleteOne = Model =>
 exports.updateOne = Model =>
   catchAsync(async (req, res, next) => {
 
-    let Obj = filterObj(req.body, "last_name", "first_name", "phone", "email", "title", "discription");
+    let Obj = filterObj(req.body, "last_name", "first_name", "phone", "email", "title", "discription","images","see" ,"confirm");
 
     let id = req.params.id || req.user._id;
 

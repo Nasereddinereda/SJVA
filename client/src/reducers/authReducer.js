@@ -8,6 +8,8 @@ import {
 
 const initialState = {
     token: localStorage.getItem("token"),
+    // currentPage:1 ,
+    // postPage:5,
     isAuthenticated: false,
     loading: true,
     user: null,
@@ -36,7 +38,6 @@ export default (state = initialState, action) => {
         case AUTH_ERROR:
         case LOGIN_FAIL:
         case LOGOUT:
-            localStorage.removeItem("token");
             return {
                 ...state,
                 token: null,

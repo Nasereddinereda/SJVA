@@ -1,43 +1,57 @@
 import {
-    // GET_LOGS,
+    // GET_ITEMS,
     // SEARCH_LOGS,
     SET_LOADING,
+    SEARCH_ITEMS,
     ITEMS_ERROR,
-    ADD_ITEM
+    ADD_ITEM,
+    GET_ITEMS,
+    GET_EVENTS,
     // DELETE_LOG,
-    // SET_CURRENT,
+    SET_CURRENT,
     // CLEAR_CURRENT,
     // UPDATE_LOG
 } from "../actions/types";
 
 
 const initialState = {
+    items:null ,
+    events:null,
+    // itemCurrent:null,
     title: null,
     discription: null,
     role: "item",
     current: null,
     loading: false,
+    loadingev: false,
+    // loadinCurrent: false,
     error: null
 };
 
 export default (state = initialState, action) => {
     switch (action.type) {
-        // case GET_LOGS:
-        //     return {
-        //         ...state,
-        //         logs: action.payload,
-        //         loading: false
-        //     };
-        // case SEARCH_LOGS:
-        //     return {
-        //         ...state,
-        //         logs: action.payload,
-        //         loading: false
-        //     };
+        case GET_ITEMS:
+            return {
+                ...state,
+                items: action.payload,
+                loading: false
+            };
+        case GET_EVENTS:
+            return {
+                ...state,
+                events: action.payload,
+                loadingev: false
+            };
+        case SEARCH_ITEMS:
+            return {
+                ...state,
+                items: action.payload,
+                loading: false
+            };
         case ADD_ITEM:
             return {
                 ...state,
-                logs: [...state.logs, action.payload],
+                // items: [...state.items, action.payload],
                 loading: false
             };
         case SET_LOADING:
@@ -45,29 +59,13 @@ export default (state = initialState, action) => {
                 ...state,
                 loading: true
             };
-        // case DELETE_LOG:
-        //     return {
-        //         ...state,
-        //         logs: state.logs.filter(log => log.id !== action.payload),
-        //         loading: false
-        //     };
-        // case UPDATE_LOG:
-        //     return {
-        //         ...state,
-        //         logs: state.logs.map(log =>
-        //             log.id === action.payload.id ? action.payload : log
-        //         )
-        //     };
-        // case SET_CURRENT:
-        //     return {
-        //         ...state,
-        //         current: action.payload
-        //     };
-        // case CLEAR_CURRENT:
-        //     return {
-        //         ...state,
-        //         current: null
-        //     };
+
+        case SET_CURRENT:
+            return {
+                ...state,
+                current: action.payload 
+            };
+
         case ITEMS_ERROR:
             return {
                 ...state,

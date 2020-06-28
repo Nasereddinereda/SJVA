@@ -1,4 +1,5 @@
-input:focus , textarea:focus {
+@import "~react-image-gallery/styles/css/image-gallery.css";
+input:focus , textarea:focus , .link-1:focus , select , .hi-40 ,button:focus , button:active {
   outline: 0 !important;
       /* -webkit-appearance:none; */
     box-shadow: none !important;
@@ -7,6 +8,14 @@ textarea {
    resize: none;
 }
 
+    .mark {
+
+        background: none !important;
+    }
+
+    .mark i {
+      color: #12cad6 !important;
+    }
 /* Navbar  */ 
 .form-control, .input-group-text {
   border-radius: 0% !important ;
@@ -18,10 +27,15 @@ textarea {
 
 .card-btn-nav{
    transform: skew(-12deg);
-  width: 220px;
+  width: 20%;
   margin-left: 4%;
   color: white;
 
+}
+
+.card-btn-nav a {
+text-decoration: none ; 
+color: white;
 }
 
 .btn-nav{
@@ -57,18 +71,28 @@ textarea {
   font-size: 18px;
 }
 
-.nav-3{
-  padding: 4px ;
+
+.navbar-nav {
+  padding: 4px !important ;
 }
 
-.nav-3 i {
+.navbar-nav  i {
   font-size: 32px;
   padding: 10px;
+  color: white ;
 }
 
-.nav-3 h6 {
+.navbar-nav a {
+  text-decoration: none ;
   margin-top: auto;
   margin-bottom: auto;
+  color: white ;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.navbar-nav a:hover  { 
+color: #12cad6 !important;
 }
 
 .home {
@@ -76,8 +100,8 @@ textarea {
    padding-left: 10px;
 }
 
-.active{
-  color: #FF6D00;
+.active i {
+  color: #0fabbc !important;
 }
 
 /* Login  */
@@ -88,7 +112,7 @@ textarea {
   justify-content: center !important;
   align-content: center !important;
   /* padding:0 20px 20px 20px; */
-  border-top-color: #FF6D00;
+  border-top-color: #0fabbc;
 }
 
 .card i {
@@ -99,7 +123,7 @@ textarea {
 
 .card header {
   color: white;
-  background: #FF6D00;
+  background: #0fabbc;
   padding-top: 14px;
   padding-bottom: 12px;
   margin-bottom: 5vh;
@@ -114,19 +138,19 @@ textarea {
   font-size: 20px ;
 }
 
-.card input , .card textarea {
+.card input , .card textarea ,select , .hi-40{
   padding-left: 5px;
   padding-right: 5px;
   margin-bottom: 3vh;
 }
 
-.card input {
+.card input, select , .hi-40  {
   height: 40px;
 
 }
 .btn-card {
-  background: rgba(255, 109, 0,0.9) ;
-  border: 1px solid #FF6D00;
+  background: rgba(15, 171, 188,0.9) ;
+  border: 1px solid #0fabbc;
   border-radius: 5px;
   color: white;
   width: 35%;
@@ -134,12 +158,132 @@ textarea {
 }
 
 .btn-card:hover {
-  background: #FF5C00;
+  background: #0fabbc;
 }
 
-#box {
+#box , #box1 {
   /* padding: 10px; */
   height: 20px !important;
   width: 20px !important;
   margin-right: 10px;
+}
+
+/* Slide  */
+
+.card-item-image img {
+  width: 100%;
+}
+
+.containerSlide img {
+  width: 100%;
+  height: 80vh;
+}
+
+/* Carousel card  */
+
+.slick-prev:before, .slick-next:before {
+    color: black !important;
+}
+
+.mr-10-nl {
+  margin-right: 13px !important;
+}
+
+.mr-10-nl:last-child{
+  margin-right: 0;
+}
+
+.a-1 {
+  color: #262626;
+  font-size: 18px;
+}
+
+.a-1:hover {
+  color: black !important;
+}
+
+.link-1 {
+  color: #FF6D00 !important;
+}
+.link-1:hover {
+  color: #FF5C00 !important;
+}
+
+/* Galery  */
+.image-gallery-thumbnail-image{
+height: 70px !important;
+}
+
+.image-gallery-thumbnail.active, .image-gallery-thumbnail:hover, .image-gallery-thumbnail:focus {
+    outline: none;
+    border: 4px solid #FF6D00;
+}
+
+.image-gallery-icon:hover {
+    color: #FF6D00;
+}
+
+.image-gallery-content .image-gallery-slide .image-gallery-image {
+    height: calc(80vh - 80px) !important;
+}
+
+/* Commentary  */
+
+.title-com{
+  margin: 0 !important;
+  font-size: 20px ;
+  font-weight: 500;
+  line-height: 1.4 !important;
+}
+
+.time-com {
+  /* width: max-content; */
+  color: #B5B2C0;
+  font-size: 13px ;
+  font-family: cursive;
+}
+
+/* event  */
+.img-event {
+  height: 90vh;
+  width: auto;
+}
+
+.tt-event{
+  margin-right: 20px !important;
+  margin-bottom: 0px !important;
+}
+
+/* about us */ 
+.img-us{
+  border-radius: 50%;
+  height: 100px;
+  width: 75% !important;
+  margin-bottom: 15px ;
+}
+
+.marker{
+  font-size: 24px ;
+  color: #12cad6;
+}
+
+/* footer  */
+.footer{
+  border-top: 4px solid #0fabbc ;
+}
+.footer h5 {
+  color: white;
+}
+
+.footer i {
+  font-size: 20px ;
+  color: #0fabbc;
+}
+.footer p , .footer a {
+  color: #CECECE ;
+}
+
+
+.f-p{
+  text-align: justify !important;
 }

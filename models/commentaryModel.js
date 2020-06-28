@@ -1,19 +1,19 @@
 const mongoose = require("mongoose");
+const validator = require("validator");
 
 const commentarySchema = new mongoose.Schema({
-  last_name: {
+  username: {
     type: String,
     lowercase: true,
     required: [true, "please tell us your last name"],
     min: 3,
     max: 20
   },
-  first_name: {
+  email: {
     type: String,
-    lowercase: true,
-    required: [true, "please tell us your first name"],
-    min: 3,
-    max: 20
+    required: [true, "please provide your email"],
+    unique: false,
+    validate: [validator.isEmail, "please provide a valid email"]
   },
   comment: {
     type: String,

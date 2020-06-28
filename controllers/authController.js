@@ -103,6 +103,7 @@ exports.login = catchAsync(async (req, res, next) => {
   const user = await User.findOne({
     email
   }).select("+password");
+  
   if (!user || !(await user.correctpassword(password, user.password))) {
     return next(new appError("Incorrect email or password", 401));
   }
@@ -119,6 +120,8 @@ exports.auth = catchAsync(async (req, res) => {
 
 // LOGED OUT
 exports.logout = (req, res) => {
+
+
   res.cookie("jwt", "loggedout", {
     expires: new Date(Date.now() + 10 * 1000),
     httpOnly: true

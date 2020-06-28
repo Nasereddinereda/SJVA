@@ -1,5 +1,4 @@
 const express = require("express");
-const authController = require("../controllers/authController");
 const itemsController = require("../controllers/itemsController");
 const Commentary = require("./../controllers/commentaryController");
 const Registration = require("./../controllers/registrationController");
@@ -14,11 +13,15 @@ router
      itemsController.createItem
     );
 
+    router
+.route("/upload")
+    .post(itemsController.fileUploaded );
+
 router
     .route("/:id")
     .get(itemsController.getItem)
-    .patch(authController.protect, itemsController.updateItem)
-    .delete(authController.protect, itemsController.deleteItem);
+    .patch(itemsController.updateItem)
+    .delete(itemsController.deleteItem);
 
 router
     .route("/:itemId/commentary")
