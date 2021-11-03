@@ -40,7 +40,7 @@
     "redux-thunk": "^2.3.0",
     "slick-carousel": "^1.8.1",
     "util": "^0.12.2",
-    "validator": "^12.2.0"
+    "validator": "^13.7.0"
   },
   "devDependencies": {
     "concurrently": "^5.1.0",
